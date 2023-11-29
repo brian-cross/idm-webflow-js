@@ -1,3 +1,12 @@
 const headerNavDropdown = document.querySelector(".header-nav-dropdown");
-console.log("hi");
-console.log(headerNavDropdown);
+const headerNavDropdownIcon = document.querySelector(
+  ".header-nav-dropdown-icon"
+);
+
+headerNavDropdown.addEventListener("mouseover", () => {
+  gsap.to(headerNavDropdown, { rotation: 90 });
+});
+
+headerNavDropdown.addEventListener("mouseout", () => {
+  gsap.to(headerNavDropdown, { rotation: 0 });
+});
